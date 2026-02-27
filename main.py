@@ -37,6 +37,6 @@ def analyze_sentiment(text: str):
         "rating": score
     }
 
-@app.get("/comment")
+@app.post("/comment")
 async def analyze_comment(data: CommentRequest):
     return analyze_sentiment(data.comment)
